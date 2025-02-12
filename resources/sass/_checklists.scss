@@ -1,0 +1,318 @@
+.checklists-section {
+    width: 100%;
+    height: calc(100vh - 120px);
+    position: absolute;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    z-index: 2;
+
+    .checklists-section-content {
+
+        .checklists-section-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: calc(100vh - 120px);
+        }
+    }
+
+    .main-title {
+        font-size: 21px;
+        font-family: 'DinPro Medium', sans-serif;
+        height: 50px;
+        min-height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .form-section {
+        width: 680px;
+
+        .form-label {
+            font-size: 12px;
+            margin-left: 28px;
+        }
+
+        .form-group {
+            .form-control {
+                background: $white-15;
+                border: none;
+                -webkit-border-radius: 10rem;
+                -moz-border-radius: 10rem;
+                -ms-border-radius: 10rem;
+                border-radius: 10rem;
+                box-shadow: none;
+                height: 44px;
+                font-weight: 400;
+                outline: medium none;
+                padding-left: 40px;
+                padding-right: 40px;
+                font-size: 16px;
+                font-family: "DinPro", sans-serif;
+                line-height: 1.4;
+                color: $white;
+                -webkit-transition: all 0.2s ease-in-out;
+                -moz-transition: all 0.2s ease-in-out;
+                transition: all 0.2s ease-in-out;
+            }
+
+            .form-control:-webkit-autofill,
+            .form-control:-webkit-autofill:hover,
+            .form-control:-webkit-autofill:focus {
+                caret-color: $white;
+                -webkit-text-fill-color: $white;
+                -webkit-box-shadow: 0 0 0px 1000px #212c5840 inset;
+                transition: background-color 5000s ease-in-out 0s;
+            }
+
+            .form-control:hover,
+            .form-control:focus {
+                box-shadow: none;
+            }
+
+            .form-control::-webkit-input-placeholder {
+                color: $white !important;
+            }
+
+            .form-control::-moz-placeholder {
+                color: $white !important;
+            }
+
+            .form-control:-moz-placeholder {
+                color: $white !important;
+            }
+
+            .form-control:-ms-input-placeholder {
+                color: $white !important;
+            }
+
+            .info-box {
+                position: relative;
+                width: 100%;
+                max-width: 360px;
+                height: 44px;
+                .center-select {
+                    background-color: rgba(255, 255, 255, 0.1490196078);
+                    border-radius: 23px;
+                }
+            }
+
+            .offices-body {
+                width: 100%;
+
+                .country-flag {
+                    padding-top: 6px;
+                    width: 120px;
+                }
+
+                p {
+                    color: white;
+                    font-family: 'DinPro', sans-serif;
+                    font-size: 16px;
+                    margin-left: 30px;
+                }
+
+                label {
+                    color: white;
+                    font-family: 'DinPro', sans-serif;
+                    font-size: 16px;
+                }
+
+                span {
+                    color: white;
+                    margin-left: 30px;
+                }
+
+                .country {
+                    font-family: 'DinPro Medium', sans-serif;
+                    // margin-top: 38px;
+                }
+
+                .contact-btn-section {
+                    .contact-btn {
+                        width: 100%;
+                        padding-top: 8px;
+                        padding-bottom: 8px;
+                        background-color: $hover-color;
+                        color: #ffffff;
+                        -webkit-border-radius: 20px;
+                        -moz-border-radius: 20px;
+                        -ms-border-radius: 20px;
+                        border-radius: 20px;
+                        font-size: 16px;
+                        font-family: 'DinPro', sans-serif;
+                        cursor: pointer;
+                        border: 0.1rem solid $hover-color;
+                        text-decoration: none;
+                    }
+
+                    .contact-btn:hover {
+                        background: $main-color;
+                        border: 0.1rem solid $main-color;
+                    }
+                }
+            }
+
+            .prefix-label {
+                font-size: 12px;
+            }
+
+            .confirm-button {
+                width: 100%;
+                height: 44px;
+                background: $main-color;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $white;
+                -webkit-border-radius: 10rem;
+                -moz-border-radius: 10rem;
+                -ms-border-radius: 10rem;
+                border-radius: 10rem;
+                border: none;
+                font-size: 16px;
+                font-family: "DinPro", sans-serif;
+                cursor: pointer;
+
+                &:hover {
+                    background: $hover-color !important;
+                    color: $white !important;
+                }
+
+                &:focus,
+                &:active {
+                    background: $main-color;
+                    color: $white;
+                    border-color: $main-color !important;
+                    outline: none;
+                    box-shadow: none;
+                }
+
+                &.disabled,
+                &:disabled,
+                &[disabled] {
+                    opacity: 1 !important;
+                }
+            }
+        }
+    }
+
+    #document .card {
+        border: none;
+        border-radius: 0px;
+        background-color: transparent;
+
+        .card-header {
+            border: 0;
+            border-radius: 0px;
+            padding: 0;
+            margin-bottom: 0px !important;
+
+            .btn-header-link {
+                color: $white;
+                display: block;
+                text-align: left;
+                padding: 20px;
+                padding-left: 42px;
+                font-size: 18px;
+                font-family: "DinPro Medium", sans-serif;
+                background: $white-15;
+                margin-top: 2px;
+                border: none;
+                border-radius: 0px;
+
+                &::after {
+                    content: "\f068";
+                    font-family: "FontAwesome";
+                    font-weight: 900;
+                    float: right;
+                }
+
+                &.collapsed {
+                    color: $white;
+                    background: $white-15;
+
+                    &::after {
+                        content: "\f067";
+                    }
+                }
+
+                &:focus,
+                &:active {
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+        }
+
+        .card-body {
+            padding-left: 42px;
+            padding-right: 42px;
+            font-size: 16px;
+            font-family: "DinPro Light", sans-serif;
+            line-height: 1.5;
+            background-color: $white-05;
+            margin-top: 2px;
+        }
+
+        .collapsing {
+            background: $white-05;
+            line-height: 30px;
+            color: $white;
+            font-size: 16px;
+            font-family: "DinPro", sans-serif;
+        }
+
+        .collapse {
+            border: 0;
+
+            &.show {
+                line-height: 30px;
+                color: $white;
+                font-size: 16px;
+                font-family: "DinPro", sans-serif;
+            }
+        }
+    }
+
+    #document .card:first-child .card-header .btn-header-link {
+        margin-top: 0;
+    }
+}
+
+.checklists-section::-webkit-scrollbar{
+    width: 10px;
+    cursor: pointer;
+}
+
+.checklists-section::-webkit-scrollbar-thumb {
+    background-color: #003366;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checklists-section::-webkit-scrollbar-track {
+    background-color: #0f609c;
+}
+
+@media only screen and (max-width: 787.98px) {
+    .checklists-section {
+        .form-section {
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        #document .card {
+            .card-body {
+                padding: 0;
+            }
+        }
+    }
+}

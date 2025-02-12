@@ -1,0 +1,27 @@
+.calendar-section {
+    width: 100%;
+    height: calc(100vh - 120px);
+    position: absolute;
+    overflow-y: scroll;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    z-index: 2;
+}
+
+.calendar-section::-webkit-scrollbar{
+    width: 10px;
+    cursor: pointer;
+}
+
+.calendar-section::-webkit-scrollbar-thumb {
+    background-color: #003366;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calendar-section::-webkit-scrollbar-track {
+    background-color: #0f609c;
+}

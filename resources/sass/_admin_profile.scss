@@ -1,0 +1,175 @@
+.admin-profile-section {
+    width: 100vw;
+    height: calc(100vh - 120px);
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+
+
+    .profile-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 30px;
+        width: 50vw;
+        min-width: 630px;
+
+        .main-title {
+            font-size: 21px;
+            font-family: "DinPro Medium", sans-serif;
+            height: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .my-profile-part {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .info-details {
+                display: flex;
+                flex-direction: column;
+                font-size: 16px;
+                font-family: "DinPro", sans-serif;
+                width: 100%;
+
+                .info-detail {
+                    display: flex;
+                    border-top: 2px solid transparent;
+                    height: 48px;
+                    gap: 2px;
+                    width: 100%;
+
+                    .info-head {
+                        width: 33.3%;
+                        background-color: #003366;
+                        display: flex;
+                        padding-left: 30px;
+                        align-items: center;
+                    }
+
+                    .info-value {
+                        width: 66.6%;
+                        background-color: #266ea5;
+                        display: flex;
+                        align-items: center;
+
+                        .form-input-custom {
+                            width: 100%;
+                            height: 100%;
+                            padding-left: 40px;
+                            padding-right: 40px;
+                            background-color: transparent;
+                            outline: none;
+                            border: none;
+                            color: white;
+                        }
+
+                        .form-select-custom.select-left-icon {
+                            .select-selected {
+                                padding-left: 7px;
+                                gap: 8px;
+                            }
+                        }
+
+                        .form-select-custom {
+                            width: 100%;
+                        }
+
+                        .phone-code-select {
+                            width: 30%;
+                            height: 100%;
+                        }
+
+                        .phone-code-input {
+                            width: 70%;
+                            padding-left: 0;
+                        }
+                    }
+                }
+
+                .center-part {
+                    .info-value {
+                        justify-content: space-between;
+                        padding: 0 35px;
+                        img {
+                            cursor: pointer;
+                            width: 20px;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .my-access-part {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+
+            .access-detail-group {
+                display: flex;
+                gap: 2px;
+
+                .access-detail {
+                    display: flex;
+                    width: 50%;
+                    background-color: #003366;
+                    font-size: 16px;
+                    font-family: "DinPro", sans-serif;
+                    height: 46px;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    transition: 0.3s;
+                }
+
+                .access-detail:hover {
+                    opacity: .7;
+                    transition: 0.3s;
+                }
+
+                .active {
+                    background-color: #00a9ea;
+                }
+            }
+
+        }
+    }
+}
+
+.admin-profile-section::-webkit-scrollbar{
+    width: 10px;
+    cursor: pointer;
+}
+
+.admin-profile-section::-webkit-scrollbar-thumb {
+    background-color: #003366;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.admin-profile-section::-webkit-scrollbar-track {
+    background-color: #0f609c;
+}
+
+@media only screen and (max-width: 1080px) {
+    .admin-profile-section {
+        .profile-body {
+            min-width: 70%;
+        }
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .admin-profile-section {
+        .profile-body {
+            min-width: 100%;
+        }
+    }
+}

@@ -1,0 +1,180 @@
+.content-manager-section {
+    width: 100vw;
+    height: calc(100vh - 120px);
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+
+    .manager-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 30px;
+        width: 50vw;
+
+        .main-titles {
+            font-size: 21px;
+            font-family: "DinPro Medium", sans-serif;
+            height: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .content-panel-part {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+
+            .content-panel {
+                width: 25%;
+                font-family: "DinPro", sans-serif;
+                font-size: 16px;
+                height: 70px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #003366;
+                border: 1px solid #005695;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            .content-panel:hover {
+                transition: 0.3s;
+                background-color: #00a9ea;
+            }
+
+            .content-panel.active {
+                background-color: #00a9ea;
+            }
+        }
+
+        .content-edit-body {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            .content-detail1 {
+
+                .title {
+                    font-size: 24px;
+                    font-family: "Montserrat Medium", sans-serif;
+                    text-align: center;
+                }
+
+                .sub-title {
+                    font-size: 28px;
+                    font-family: "Montserrat Medium", sans-serif;
+                }
+
+                .description {
+                    font-size: 16px;
+                    font-family: "Montserrat Regular", sans-serif;
+                    line-height: 30px;
+                }
+
+                .editable-content {
+                    outline: none;
+                    border-radius: 10px;
+                    padding: 5px 10px;
+                }
+
+                .editable-focus {
+                    outline: 2px solid #266ea5;
+                }
+            }
+
+            .content-detail2 {
+                padding: 10px 20px;
+                .main-title {
+                    font-size: 24px;
+                    font-family: "DinPro Medium", sans-serif;
+                    text-align: justify;
+                    padding-bottom: 16px;
+                    font-weight: bold;
+                }
+
+                .sub-title {
+                    font-size: 16px;
+                    font-family: "DinPro Medium", sans-serif;
+                    margin-left: 32px;
+                    text-align: justify;
+                    font-weight: bold;
+                    padding-bottom: 16px;
+                }
+
+                .para-list {
+                    padding-left: 16px;
+                }
+
+                .para-list li {
+                    padding-left: 20px;
+                }
+
+                .para-list-digit {
+                    list-style-type: decimal;
+                    padding-left: 16px;
+                }
+
+                .para-list-digit li {
+                    padding-left: 20px;
+                }
+
+                table, tr, td, th {
+                    border: 1px solid black;
+                    text-align: left;
+                }
+
+                td, th {
+                    padding: 8px;
+                }
+
+                th {
+                    background-color: #003c714d;
+                }
+            }
+        }
+    }
+}
+
+.content-manager-section::-webkit-scrollbar{
+    width: 10px;
+    cursor: pointer;
+}
+
+.content-manager-section::-webkit-scrollbar-thumb {
+    background-color: #003366;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.content-manager-section::-webkit-scrollbar-track {
+    background-color: #0f609c;
+}
+
+@media only screen and (max-width: 1080px) {
+    .content-manager-section {
+        .manager-body {
+            width: 90%;
+        }
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .content-manager-section {
+        .manager-body {
+            width: 100%;
+
+            .content-panel-part {
+                width: 100%;
+
+                .content-panel {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}

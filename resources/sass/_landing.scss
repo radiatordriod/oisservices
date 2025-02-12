@@ -1,0 +1,342 @@
+.main-bg {
+    position: relative;
+
+    .landing-section {
+        position: absolute;
+        width: 100vw;
+        height: calc(100vh - 120px);
+        top: 80px;
+        display: flex;
+        justify-content: center;
+        overflow-y: scroll;
+        flex-wrap: wrap;
+        z-index: 3;
+
+        .backoffice-body {
+            width: 35vw !important;
+            padding-top: 15px !important;
+
+            .navItem {
+                width: 33.3333% !important;
+            }
+        }
+
+        .backoffice-title,
+        .dashboard-title {
+            font-size: 21px;
+            color: white;
+            font-family: 'DinPro Medium', sans-serif;
+            margin-top: 20px;
+        }
+
+        .backoffice-subtitle {
+            font-size: 12px;
+            color: white;
+            font-family: 'DinPro', sans-serif;
+            margin-bottom: 0px;
+        }
+
+        .menu-body {
+            width: 50vw;
+            z-index: 1;
+            color: white;
+            padding-top: 40px;
+            align-content: center;
+
+            .navItem {
+                width: 20%;
+                padding: 0;
+
+                .navItemWrap {
+                    height: 0;
+                    padding-bottom: 100%;
+                    transition: 0.6s ease-in-out;
+                    transform-style: preserve-3d;
+                    border: 0.1rem solid transparent;
+
+                    .navItemWrap-front {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background-color: $white-15;
+                        backface-visibility: hidden;
+                        transition: 0.2s ease-in-out;
+
+                        .menu-num {
+                            font-size: 56px;
+                            font-family: 'DinPro Bold', sans-serif;
+                            color: white;
+                            position: absolute;
+                            left: 20px;
+                            bottom: 20px;
+                        }
+
+                        .menu-title {
+                            font-size: 16px;
+                            font-family: 'DinPro Medium', sans-serif;
+                            color: white;
+                            text-align: center;
+                            margin: 0;
+                        }
+
+                        .menu-detail {
+                            font-size: 12px;
+                            font-family: 'DinPro', sans-serif;
+                            color: white;
+                            margin-bottom: 0px;
+                            text-align: center;
+                        }
+
+                        img {
+                            width: 45px;
+                            margin-top: 5px;
+                        }
+                    }
+
+                    .navItemWrap-back {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        transform: rotateY(0.5turn);
+                        -webkit-transform: rotateY(0.5turn);
+                        opacity: 0;
+                        transition: opacity 0.6s ease-in-out;
+
+                        .empty-part {
+                            background-color: $main-color;
+                            opacity: 0.6;
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        .text-part {
+                            background-color: $main-color;
+                            opacity: 0.6;
+                            width: 100%;
+                            height: 80%;
+
+                            .menu-num {
+                                font-size: 56px;
+                                font-family: 'DinPro Bold', sans-serif;
+                                color: white;
+                                position: absolute;
+                                left: 20px;
+                                top: 0px;
+                            }
+
+                            .menu-title {
+                                font-size: 16px;
+                                font-family: 'DinPro Bold', sans-serif;
+                                color: white;
+                                margin-left: 10px;
+                            }
+
+                            .menu-detail {
+                                font-size: 12px;
+                                font-family: 'DinPro', sans-serif;
+                                color: white;
+                                margin-bottom: 0px;
+                                margin-left: 10px;
+                                text-align: center;
+                            }
+                        }
+
+                        .go-to-page {
+                            background-color: $main-color;
+                            height: 20%;
+                            display: flex;
+                            align-items: center;
+                            vertical-align: middle;
+
+                            a {
+                                font-size: 16px;
+                                font-family: 'DinPro', sans-serif;
+                                color: white;
+                                width: 100%;
+                                text-align: center;
+                                cursor: pointer;
+                                text-decoration: none;
+                            }
+                        }
+
+                        @media only screen and (max-width: 575.98px) {
+                            .text-part {
+                                .menu-num {
+                                    font-size: 45px;
+                                    left: 10px;
+                                    font-family: 'DinPro Medium', sans-serif;
+                                }
+
+                                .menu-title {
+                                    font-size: 16px;
+                                    top: 68px;
+                                    left: 10px;
+                                    font-family: 'DinPro Medium', sans-serif;
+                                }
+
+                                .menu-detail {
+                                    font-size: 14px;
+                                    top: 98px;
+                                    left: 10px;
+                                    font-family: 'DinPro Light', sans-serif;
+                                }
+                            }
+
+                            .go-to-page {
+                                a {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+
+                    .menu-item {
+                        background: transparent;
+                        opacity: 1;
+                        text-decoration: none;
+                        .menu-detail {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                            justify-content: center;
+                            align-items: center;
+                            img{
+                                opacity: 0.3;
+
+                            }
+                        }
+                    }
+
+                    .menu-item:hover {
+                        .menu-detail {
+                            img {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .navItem:hover {
+                .navItemWrap {
+
+                    // transform: rotateY(0.5turn);
+                    // -webkit-transform:  rotateY(0.5turn);
+                    // .navItemWrap-back {
+                    //     opacity: 1;
+                    // }
+                    .navItemWrap-front {
+                        background-color: $main-color-50;
+                    }
+                }
+            }
+
+            .last-panel {
+                margin-bottom: 40px;
+            }
+
+            @media only screen and (max-width: 1080px) {
+                .navItem {
+                    width: 25%;
+                }
+
+                .last-panel {
+                    margin-bottom: 0px !important;
+                }
+            }
+
+            @media only screen and (max-width: 575.98px) {
+                .navItem {
+                    width: 33.33%;
+                }
+
+                .last-panel {
+                    margin-bottom: 0px !important;
+                }
+            }
+        }
+
+    }
+
+    .landing-section::-webkit-scrollbar{
+        width: 10px;
+        cursor: pointer;
+    }
+    
+    .landing-section::-webkit-scrollbar-thumb {
+        background-color: #003366;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .landing-section::-webkit-scrollbar-track {
+        background-color: #0f609c;
+    }
+
+}
+
+
+.foot-section {
+    padding: 80px 0px;
+    background-color: #005696;
+    width: 100%;
+
+    p {
+        font-size: 14px;
+        font-family: 'Montserrat Regular', sans-serif;
+        color: $white;
+    }
+
+    .company {
+        font-size: 12px;
+        font-family: 'DinPro', sans-serif;
+        color: $white;
+        opacity: 0.5;
+        text-decoration: none;
+    }
+
+    a {
+        font-size: 14px;
+        font-family: 'Montserrat Regular', sans-serif;
+        color: $white!important;
+        opacity: 0.5;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    a:hover {
+        opacity: 1;
+        text-decoration: none;
+    }
+
+    img {
+        width: 25px;
+    }
+}
+
+.desktop-version {
+    display: block;
+}
+
+.mobile-version {
+    display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .main-bg {
+        .landing-section {
+            .menu-body {
+                width: 100vw;
+                padding: 0px;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 575.98px) {
+    .foot-section {
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+}
